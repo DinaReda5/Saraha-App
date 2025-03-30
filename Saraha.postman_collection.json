@@ -1,0 +1,112 @@
+{
+	"info": {
+		"_postman_id": "4a88eb58-451e-492a-9415-16ba7bf8f2b7",
+		"name": "Saraha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "36024768"
+	},
+	"item": [
+		{
+			"name": "users",
+			"item": [
+				{
+					"name": "signUp",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"dina\",\r\n    \"email\":\"dr473079@gmail.com\",\r\n    \"password\":\"Dina@12345\",\r\n    \"cPassword\":\"Dina@12345\",\r\n    \"phone\":\"01234567899\",\r\n    \"gender\":\"female\",\r\n    \"role\":\"user\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signUp",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signUp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\":\"dr473079@gmail.com\",\r\n    \"password\":\"Dina@12345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/signIn",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"signIn"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "getProfile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true,
+						"disabledSystemHeaders": {
+							"content-length": true,
+							"content-type": true
+						}
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImRyNDczMDc5QGdtYWlsLmNvbSIsImlkIjoiNjdhOTEzODRiZDg0Njk4YjE5NDY0ZmFkIiwiaWF0IjoxNzM5MTMzOTMxfQ.X9lkK_Ud5OOTXQ44esrLaQL2JFPvNJI1xtCKD0qOG24",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:3000/users/getProfile",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"users",
+								"getProfile"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
